@@ -1,0 +1,16 @@
+<div>
+  <form name="input-Form" (ngSubmit)="handle(username)" #inputForm = "ngForm">
+    <div class="form-group">
+      <label for ="userName">Enter the User Name:</label>
+      <input type="text"
+             #inputName = "ngModel"
+             required
+             name="userName"
+             [(ngModel)] = "username"
+             class="form-control"
+             id="userName"
+             placeholder="Enter User Name">
+      <a [routerLink]="['../dashboard']"><button (click)="newUser(username)" type="submit" class="btn btn-primary" [disabled] = "inputForm.invalid">Get Details</button></a>
+    </div>
+  </form>
+</div>
