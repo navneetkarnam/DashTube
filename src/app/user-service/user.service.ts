@@ -25,7 +25,7 @@ export class UserService {
     let forUsername = '&forUsername=';
     let user = userName;
     let part = '&part=snippet,contentDetails,statistics';
-    let key = '?key={YOUR API-KEY} '
+    let key = '?key={YOUR API-KEY}'
 
     return this.http.get(encodeURI(url + key + forUsername + user + part))
       .map(response => response.json())
